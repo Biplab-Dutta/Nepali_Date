@@ -72,7 +72,9 @@ function _getNepaliDate() {
 	Mainloop.timeout_add_seconds(1, _getNepaliDate);
 }
 
-function init() { }
+function init() {
+
+}
 
 function enable() {
 	button = new St.Bin({
