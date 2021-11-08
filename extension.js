@@ -96,4 +96,8 @@ function enable() {
 
 function disable() {
 	Main.panel._centerBox.remove_child(button);
+	if (button) {
+		button.destroy();
+		buttton = null;
+	}
 }
