@@ -2,7 +2,7 @@ const { Clutter, St } = imports.gi;
 const Main = imports.ui.main;
 const Mainloop = imports.mainloop;
 
-let text, button;
+let text, button, sourceId = null;
 
 function _getNepaliDate() {
 
@@ -78,7 +78,7 @@ function _getNepaliDate() {
 		text: nepDate + " B.S."
 	});
 	button.set_child(text);
-	Mainloop.timeout_add_seconds(1, _getNepaliDate);
+	sourceId = Mainloop.timeout_add_seconds(1, _getNepaliDate);
 }
 
 function init() { }
@@ -103,5 +103,9 @@ function disable() {
 	if (button) {
 		button.destroy();
 		buttton = null;
+	}
+	if (sourceId) {
+		Mainloop.source_remove(sourceId);
+		sourceId = null;
 	}
 }
