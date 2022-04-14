@@ -63,6 +63,10 @@ function _getNepaliDate() {
 	for (i = 0; i < ref_date_nep.length; i++) {
 		date_diff[i] += ref_date_nep[i];
 		if (i == 1) {
+			if (date_diff[i] >= 13) {
+				date_diff[i] -= 12;
+				date_diff[i - 1] += 1;
+			}
 			month = months[date_diff[i] - 1];
 		}
 	}
