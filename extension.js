@@ -67,7 +67,7 @@ function _getNepaliDate() {
 				date_diff[i] -= 12;
 				date_diff[i - 1] += 1;
 			}
-			month = months[date_diff[i] - 1];
+			month = months[(date_diff[i] - 1)/months.length];
 		}
 	}
 	nepDate = "|          " + month + " " + date_diff[2] + ", " + date_diff[0];
