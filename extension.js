@@ -26,7 +26,7 @@ function _getNepaliDate() {
 		'90': { 'mon_days': [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30], 'tot_days': 365 },
 	};
 
-	months = ['Baishak', 'Jestha', 'Ashar', 'Shrawan', 'Bhadra', 'Asoj', 'Kartik', 'Mangsir', 'Poush', 'Magh', 'Falgun', 'Chaitra'];
+	months = ['Baisakh', 'Jestha', 'Ashar', 'Shrawan', 'Bhadra', 'Ashoj', 'Kartik', 'Mangsir', 'Poush', 'Magh', 'Falgun', 'Chaitra'];
 
 	ref_date_nep = [2074, 1, 1];
 	ref_date_eng = new Date(2017, 3, 14);
