@@ -3,9 +3,10 @@
   "name": "Nepali Date",
   "shell-version": [
     "40",
-    "41"
+    "41",
+    "42"
   ],
   "url": "https://github.com/Biplab-Dutta/Nepali_Date",
   "uuid": "nepali-date@biplab",
-  "version": 12
+  "version": 16
 }
