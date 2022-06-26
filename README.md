@@ -5,3 +5,5 @@ A gnome shell extension for Linux that displays nepali date on the panel.
 
 ## On the top panel
 <img src="https://raw.githubusercontent.com/Biplab-Dutta/Nepali_Date/master/assets/entire_top_panel.png"></img>
+
+### [🔗 Download Link](https://extensions.gnome.org/extension/4518/nepali-date/)
