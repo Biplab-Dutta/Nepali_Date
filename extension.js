@@ -1,14 +1,17 @@
 import Clutter from 'gi://Clutter';
+import GLib from 'gi://GLib';
 import St from 'gi://St';
+
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-const GLib = imports.gi.GLib;
+
+import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 let text,
   button,
   sourceId = null;
 
 function _getNepaliDate() {
-  nepcal = {
+  const nepcal = {
     74: {
       mon_days: [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
       tot_days: 365,
@@ -79,7 +82,7 @@ function _getNepaliDate() {
     },
   };
 
-  months = [
+  const months = [
     'Baisakh',
     'Jestha',
     'Ashar',
@@ -94,22 +97,23 @@ function _getNepaliDate() {
     'Chaitra',
   ];
 
-  ref_date_nep = [2074, 1, 1];
-  ref_date_eng = new Date(2017, 3, 14);
-  inp_date_eng = new Date();
+  const ref_date_nep = [2074, 1, 1];
+  const ref_date_eng = new Date(2017, 3, 14);
+  const inp_date_eng = new Date();
 
-  day_diff = Math.floor((inp_date_eng - ref_date_eng) / (1000 * 3600 * 24));
-  month_diff = 0;
-  year_diff = 0;
-  stop_loop = false;
-  start_year = '74';
+  let day_diff = Math.floor((inp_date_eng - ref_date_eng) / (1000 * 3600 * 24));
+  let month_diff = 0;
+  let year_diff = 0;
+  let stop_loop = false;
+  let start_year = '74';
+  
   while (!stop_loop) {
     if (day_diff > nepcal[start_year]['tot_days']) {
       year_diff++;
       day_diff -= nepcal[start_year]['tot_days'];
     } else {
-      for (i = 0; i < nepcal[start_year]['mon_days'].length; i++) {
-        days_mon = nepcal[start_year]['mon_days'][i];
+      for (let i = 0; i < nepcal[start_year]['mon_days'].length; i++) {
+        let days_mon = nepcal[start_year]['mon_days'][i];
         if (day_diff >= days_mon) {
           month_diff++;
           day_diff -= days_mon;
@@ -123,18 +127,21 @@ function _getNepaliDate() {
       start_year++;
     }
   }
-  date_diff = [year_diff, month_diff, day_diff];
-  for (i = 0; i < ref_date_nep.length; i++) {
+  
+  let date_diff = [year_diff, month_diff, day_diff];
+  
+  for (let i = 0; i < ref_date_nep.length; i++) {
     date_diff[i] += ref_date_nep[i];
     if (i == 1) {
       if (date_diff[i] >= 13) {
         date_diff[i] -= 12;
         date_diff[i - 1] += 1;
       }
-      month = months[date_diff[i] - 1];
+      var month = months[date_diff[i] - 1];
     }
   }
-  nepDate = '|          ' + month + ' ' + date_diff[2] + ', ' + date_diff[0];
+  let nepDate =
+    '|          ' + month + ' ' + date_diff[2] + ', ' + date_diff[0];
   text = new St.Label({
     style_class: 'nepcal-label',
     y_expand: true,
@@ -142,7 +149,7 @@ function _getNepaliDate() {
     text: nepDate + ' B.S.',
   });
   button.set_child(text);
-  sourceId = GLib.timeout_add_seconds(1, _getNepaliDate);
+  sourceId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1, _getNepaliDate);
 }
 
 export default class NepaliDateExtension extends Extension {
@@ -171,5 +178,6 @@ export default class NepaliDateExtension extends Extension {
       GLib.source_remove(sourceId);
       sourceId = null;
     }
+    text = null;
   }
 }
