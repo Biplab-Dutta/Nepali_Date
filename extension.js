@@ -106,7 +106,7 @@ function _getNepaliDate() {
   let year_diff = 0;
   let stop_loop = false;
   let start_year = '74';
-  
+
   while (!stop_loop) {
     if (day_diff > nepcal[start_year]['tot_days']) {
       year_diff++;
@@ -127,9 +127,9 @@ function _getNepaliDate() {
       start_year++;
     }
   }
-  
+
   let date_diff = [year_diff, month_diff, day_diff];
-  
+
   for (let i = 0; i < ref_date_nep.length; i++) {
     date_diff[i] += ref_date_nep[i];
     if (i == 1) {
@@ -140,8 +140,10 @@ function _getNepaliDate() {
       var month = months[date_diff[i] - 1];
     }
   }
+
   let nepDate =
     '|          ' + month + ' ' + date_diff[2] + ', ' + date_diff[0];
+
   text = new St.Label({
     style_class: 'nepcal-label',
     y_expand: true,
@@ -170,14 +172,17 @@ export default class NepaliDateExtension extends Extension {
 
   disable() {
     Main.panel._centerBox.remove_child(button);
+
     if (button) {
       button.destroy();
       button = null;
     }
+
     if (sourceId) {
       GLib.source_remove(sourceId);
       sourceId = null;
     }
+
     text = null;
   }
 }
