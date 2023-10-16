@@ -1,5 +1,6 @@
-const { Clutter, St } = imports.gi;
-const Main = imports.ui.main;
+import Clutter from 'gi://Clutter';
+import St from 'gi://St';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 const Mainloop = imports.mainloop;
 
 let text, button, sourceId = null;
