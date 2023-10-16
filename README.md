@@ -7,6 +7,9 @@ A gnome shell extension for Linux that displays nepali date on the panel.
 <img src="https://raw.githubusercontent.com/Biplab-Dutta/Nepali_Date/master/assets/entire_top_panel.png"></img>
 
 ## Customizations
-If you want to customize the look and feel to your preference, then navigate to `~/.local/share/gnome-shell/extensions/nepali-date@biplab/` and add a `css` file. You can also edit `extension.js` file if you know what you are doing because it might break the extension if improperly configured. 
+If you want to customize the look and feel to your preference, then navigate to `~/.local/share/gnome-shell/extensions/nepali-date@biplab/` and add a `css` file. You can also edit `extension.js` file if you know what you are doing because it might break the extension if improperly configured.
+
+## Note
+If the extension breaks or doesn't work after having your gnome version upgraded to 45, try uninstalling the old extension and re-install it again from the download link below.
 
 ### [🔗 Download Link](https://extensions.gnome.org/extension/4518/nepali-date/)
