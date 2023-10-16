@@ -1,7 +1,7 @@
 import Clutter from 'gi://Clutter';
 import St from 'gi://St';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
-const Mainloop = imports.mainloop;
+const GLib = imports.gi.GLib;
 
 let text,
   button,
@@ -142,7 +142,7 @@ function _getNepaliDate() {
     text: nepDate + ' B.S.',
   });
   button.set_child(text);
-  sourceId = Mainloop.timeout_add_seconds(1, _getNepaliDate);
+  sourceId = GLib.timeout_add_seconds(1, _getNepaliDate);
 }
 
 export default class NepaliDateExtension extends Extension {
@@ -168,7 +168,7 @@ export default class NepaliDateExtension extends Extension {
       button = null;
     }
     if (sourceId) {
-      Mainloop.source_remove(sourceId);
+      GLib.source_remove(sourceId);
       sourceId = null;
     }
   }
