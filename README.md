@@ -8,6 +8,7 @@ A gnome shell extension for Linux that displays nepali date on the panel.
 
 ## Customizations
 If you want to customize the look and feel to your preference, then navigate to `~/.local/share/gnome-shell/extensions/nepali-date@biplab/` and add a `css` file. You can also edit `extension.js` file if you know what you are doing because it might break the extension if improperly configured.
+
 It is important that after saving the changes, you logout and log back in to see the changes.
 
 ## Note
