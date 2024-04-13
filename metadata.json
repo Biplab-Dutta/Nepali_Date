@@ -1,10 +1,8 @@
 {
   "description": "Shows nepali date on the panel.",
   "name": "Nepali Date",
-  "shell-version": [
-    "45"
-  ],
+  "shell-version": ["45", "46"],
   "url": "https://github.com/Biplab-Dutta/Nepali_Date",
   "uuid": "nepali-date@biplab",
-  "version": 19
+  "version": 20
 }
