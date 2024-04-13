@@ -12,6 +12,9 @@ If you want to customize the look and feel to your preference, then navigate to 
 It is important that after saving the changes, you logout and log back in to see the changes.
 
 ## Note
-If the extension breaks or doesn't work after having your gnome version upgraded to 45, try uninstalling the old extension and re-install it again from the download link below.
+If the extension breaks or doesn't work after having your gnome version upgraded, try uninstalling the old extension and re-install it again from the download link below.
 
-### [🔗 Download Link](https://extensions.gnome.org/extension/4518/nepali-date/)
+### 🔗 Download Link
+[<img src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true" alt="Get it on GNOME Extensions" height="100" align="middle">][Nepali_Date]
+
+[Nepali_Date]:https://extensions.gnome.org/extension/4518/nepali-date/
