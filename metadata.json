@@ -1,8 +1,8 @@
 {
   "description": "Shows nepali date on the top status area.",
   "name": "Nepali Date",
-  "shell-version": ["45", "46"],
+  "shell-version": ["45", "46", "47"],
   "url": "https://github.com/Biplab-Dutta/Nepali_Date",
   "uuid": "nepali-date@biplab",
-  "version": 21
+  "version": 22
 }
