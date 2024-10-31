@@ -1,5 +1,7 @@
 A gnome shell extension for Linux that displays nepali date on the panel.
 
+> Project inspired by [gnome-shell-nepali-calender-extension][Inspired-From]. 
+
 ## How it looks
 <img src="https://raw.githubusercontent.com/Biplab-Dutta/Nepali_Date/master/assets/center_top_panel.png"></img>
 
@@ -18,3 +20,4 @@ If the extension breaks or doesn't work after having your gnome version upgraded
 [<img src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true" alt="Get it on GNOME Extensions" height="100" align="middle">][Nepali_Date]
 
 [Nepali_Date]:https://extensions.gnome.org/extension/4518/nepali-date/
+[Inspired-From]:https://github.com/amitgaru2/gnome-shell-nepali-calender-extension
