@@ -1,5 +1,72 @@
 /* Edit the css file to customize the look */
 
-/* .nepcal-label {
-    
-} */
+.nepcal-calendar {
+  spacing: 8px;
+  min-width: 320px;
+}
+
+.nepcal-header {
+  spacing: 6px;
+}
+
+.nepcal-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.nepcal-subtitle {
+  font-size: 0.85em;
+  color: #999;
+}
+
+.nepcal-nav {
+  padding: 6px;
+  min-width: 0;
+  border-radius: 99px;
+}
+
+.nepcal-grid {
+  spacing-rows: 2px;
+  spacing-columns: 2px;
+}
+
+.nepcal-weekday {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #aaa;
+  padding: 4px 0;
+}
+
+.nepcal-day {
+  padding: 4px 2px;
+  border-radius: 8px;
+  min-width: 40px;
+}
+
+.nepcal-day-bs {
+  font-size: 1.05em;
+}
+
+.nepcal-day-ad {
+  font-size: 0.7em;
+  color: #888;
+}
+
+.nepcal-saturday .nepcal-day-bs,
+.nepcal-weekday.nepcal-saturday {
+  color: #e66;
+}
+
+.nepcal-today {
+  background-color: -st-accent-color;
+}
+
+.nepcal-today .nepcal-day-bs,
+.nepcal-today .nepcal-day-ad {
+  color: -st-accent-fg-color;
+  font-weight: bold;
+}
+
+.nepcal-today-button {
+  margin-top: 4px;
+}
